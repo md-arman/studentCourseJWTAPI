@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "c00d8f54-6110-4010-8045-00059f2ff23b",
+		"name": "student_course_jwt_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31991436"
+	},
+	"item": [
+		{
+			"name": "Get course by Id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmNkIiwiZXhwIjoxNzAzNjQ3MDIxLCJpYXQiOjE3MDM2MTEwMjF9.kiyhL5gTNQm8HZcrJWaGczESqanqp0Xt1YHZS7hw1Ro",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/kfh/getCourse/:courseID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kfh",
+						"getCourse",
+						":courseID"
+					],
+					"variable": [
+						{
+							"key": "courseID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Course",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmNkIiwiZXhwIjoxNzAzNjQ3MDIxLCJpYXQiOjE3MDM2MTEwMjF9.kiyhL5gTNQm8HZcrJWaGczESqanqp0Xt1YHZS7hw1Ro",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"courseId\": 1,\r\n\"courseName\":\"hindi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/kfh/addCourse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kfh",
+						"addCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Course",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MDM2NDYxNTYsImlhdCI6MTcwMzYxMDE1Nn0.qi11n1vgKYn65dFvOTFJEsBv0Ln3E4RvJtt3DCCTiMk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/kfh/updateCourse/:courseID/:newCourseName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kfh",
+						"updateCourse",
+						":courseID",
+						":newCourseName"
+					],
+					"variable": [
+						{
+							"key": "courseID",
+							"value": "2"
+						},
+						{
+							"key": "newCourseName",
+							"value": "English"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MDM2NDYxNTYsImlhdCI6MTcwMzYxMDE1Nn0.qi11n1vgKYn65dFvOTFJEsBv0Ln3E4RvJtt3DCCTiMk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/kfh/deleteCourse/:courseID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kfh",
+						"deleteCourse",
+						":courseID"
+					],
+					"variable": [
+						{
+							"key": "courseID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger2 (v2/api-docs)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MDM2NDYxNTYsImlhdCI6MTcwMzYxMDE1Nn0.qi11n1vgKYn65dFvOTFJEsBv0Ln3E4RvJtt3DCCTiMk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v2/api-docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MDM2NDYxNTYsImlhdCI6MTcwMzYxMDE1Nn0.qi11n1vgKYn65dFvOTFJEsBv0Ln3E4RvJtt3DCCTiMk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"studentNameEn\":\"Arman\",\r\n\"studentNameAr\":\"ارمان\",\r\n\"email\":\"test12@kfh.com\",\r\n\"telephoneNumber\":\"+912222222\",\r\n\"address\":\"Kuwait\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/kfh/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kfh",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all courses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MDM2NDYxNTYsImlhdCI6MTcwMzYxMDE1Nn0.qi11n1vgKYn65dFvOTFJEsBv0Ln3E4RvJtt3DCCTiMk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/kfh/getCourse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kfh",
+						"getCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Allocate Course to Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MDM2NDYxNTYsImlhdCI6MTcwMzYxMDE1Nn0.qi11n1vgKYn65dFvOTFJEsBv0Ln3E4RvJtt3DCCTiMk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/kfh/allocateCourse/:studID/:courseID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kfh",
+						"allocateCourse",
+						":studID",
+						":courseID"
+					],
+					"variable": [
+						{
+							"key": "studID",
+							"value": "1"
+						},
+						{
+							"key": "courseID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Students for a selected course",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MDM2NDYxNTYsImlhdCI6MTcwMzYxMDE1Nn0.qi11n1vgKYn65dFvOTFJEsBv0Ln3E4RvJtt3DCCTiMk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/kfh/getStudents/:courseID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kfh",
+						"getStudents",
+						":courseID"
+					],
+					"variable": [
+						{
+							"key": "courseID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updated courses of a student",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MDM2NDYxNTYsImlhdCI6MTcwMzYxMDE1Nn0.qi11n1vgKYn65dFvOTFJEsBv0Ln3E4RvJtt3DCCTiMk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"courseId\": 1,\r\n        \"courseName\": \"hindi\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/kfh/updateCourseOfStudent/:studID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kfh",
+						"updateCourseOfStudent",
+						":studID"
+					],
+					"variable": [
+						{
+							"key": "studID",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3MDM2NDYxNTYsImlhdCI6MTcwMzYxMDE1Nn0.qi11n1vgKYn65dFvOTFJEsBv0Ln3E4RvJtt3DCCTiMk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/kfh/deleteStudent/:studID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kfh",
+						"deleteStudent",
+						":studID"
+					],
+					"variable": [
+						{
+							"key": "studID",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth api for jwt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"abcd\",\r\n    \"password\":\"acd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
